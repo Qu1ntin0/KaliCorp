@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO perfil (idade, sexo, peso, altura) VALUES ('$idade', '$sexo', '$peso', '$altura')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Dados salvos com sucesso!";
+        header("Location: interface.php");
     } else {
         echo "Erro: " . $sql . "<br>" . $conn->error;
     }

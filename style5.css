@@ -1,0 +1,168 @@
+/* Estilos Globais e do Corpo */
+:root {
+    /* Cores */
+    --cor-primaria: #007bff; /* Azul */
+    --cor-fundo-claro: rgba(255, 255, 255, 0.9); /* Branco semi-transparente para o container */
+    --cor-texto-escuro: #333;
+    --cor-borda: #ccc;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: flex-start; /* Alinha o conteúdo ao topo */
+    min-height: 100vh;
+    background-color: #f4f4f4; /* Cor de fundo de fallback */
+    color: var(--cor-texto-escuro);
+    /* Seu background-image viria aqui */
+    /* background-image: url('caminho/para/sua/imagem.jpg'); */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Container Principal - Responsável pela centralização e legibilidade */
+.container {
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: var(--cor-fundo-claro);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px); /* Desfoque sutil para o contraste */
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    color: var(--cor-primaria);
+    margin-bottom: 30px;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+/* Estilo do Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre os campos */
+}
+
+/* Estilo dos Grupos de Campo */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-size: 1.1em;
+}
+
+input[type="number"],
+select {
+    padding: 12px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="number"]:focus,
+select:focus {
+    border-color: var(--cor-primaria);
+    outline: none;
+}
+
+/* Botão */
+button[type="submit"] {
+    padding: 15px;
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+/* Linha divisória */
+hr {
+    border: 0;
+    border-top: 1px solid var(--cor-borda);
+    margin: 30px 0;
+}
+
+/* Estilo do Resultado - Garante o padrão alinhado e minimalista */
+.resultado-box {
+    padding: 20px;
+    border: 2px dashed var(--cor-primaria);
+    border-radius: 8px;
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.resultado-box h3 {
+    color: var(--cor-primaria);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.resultado-box p {
+    margin: 8px 0;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: space-between; /* CHAVE-VALOR: Alinha o texto à esquerda e o valor à direita */
+    border-bottom: 1px dotted #ccc; /* Linha pontilhada para minimalismo */
+    padding-bottom: 5px;
+}
+
+.resultado-box p:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.resultado-box p span:first-child {
+    /* Estilo para a chave (ex: "Idade:") */
+    font-weight: 500;
+}
+
+.resultado-box p span:last-child {
+    /* Estilo para o valor (ex: "25 anos") */
+    font-weight: 600;
+    color: var(--cor-texto-escuro);
+    text-align: right;
+}
+
+.resultado-box .calorias {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #d9534f; /* Cor de destaque (vermelho/laranja) para o resultado final */
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 2px solid var(--cor-primaria);
+    border-bottom: none;
+}
+
+.resultado-box .calorias span {
+     /* Garante que o valor final também tenha a cor de destaque */
+     color: #d9534f;
+}
